@@ -1,1 +1,1 @@
-# E-Waste-App
+# Our e-waste web application.
