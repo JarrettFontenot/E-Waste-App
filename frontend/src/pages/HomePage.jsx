@@ -1,9 +1,8 @@
-// src/Home.js
 import React from 'react';
-import './style.css'; // Import CSS file
+import '../App.css';
 
 
-function home() {
+function Home() {
   return (
     <div>
       <h1>Welcome to the Home Page</h1>
@@ -12,4 +11,4 @@ function home() {
   );
 }
 
-export default home;
+export default Home;
