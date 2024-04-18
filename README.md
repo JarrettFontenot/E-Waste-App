@@ -1,4 +1,4 @@
-# Our e-waste web application.
+# E-Waste Web Application
 Our goal for this project was to create an application that brings awareness to the growing problem of e-waste.
 # Features
 The main features of our application are below.
