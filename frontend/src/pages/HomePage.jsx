@@ -1,12 +1,22 @@
 import React from 'react';
-import '../App.css';
+import '../styles.css';
+import Header from '../components/Header';
+import SearchBar from '../components/SearchBar';
 
 
 function Home() {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the home page of our React app.</p>
+      <Header />
+      <SearchBar />
+      <div className="backgroundImage"></div>
+      <div className="secondPart">
+        <div className="secondBox">
+          <h1>Test text!</h1>
+          <p>Kitty wants out!</p>
+        </div>
+        <div className="secondImage"></div>
+      </div>
     </div>
   );
 }
