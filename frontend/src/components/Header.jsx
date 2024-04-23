@@ -8,7 +8,7 @@ function Header() {
         <h1>E-Waste</h1>
         <nav>
           <ul>
-            <li><a href="#">About</a></li>
+          <li><Link to="/about">About</Link></li> 
             <li><Link to="/register">Sign up</Link></li> 
             <li><a href="#">Log in</a></li>
             <li><a href="#">Profile</a></li>
