@@ -2,13 +2,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const axios = require("axios");
-const apiKey = 'AIzaSyCgBNTsF-x4fuML0e4CLJvlxyVKx-Cre0c';
 const cors = require("cors");
 app.use(cors());
 require('dotenv').config();
 
 const connection = process.env.MONGO_URI;
 const PORT = process.env.PORT
+const apiKey = process.env.APIKEY;
 
 async function initializeFetch() {
     let fetch;
