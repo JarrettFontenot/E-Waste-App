@@ -162,3 +162,17 @@ header ul li a {
     background-position: center;
     margin: 5%;
 }
+
+.Results-Page {
+    background-color: #3F4437;
+    color: white;
+    font-family: Georgia;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.Center {
+    margin-top: 2%;
+    font-size: 20px;
+}

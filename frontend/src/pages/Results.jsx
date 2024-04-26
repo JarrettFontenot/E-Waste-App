@@ -6,14 +6,16 @@ function Results() {
   const recycleCenters = location.state.recycleCenters || [];
 
   return (
-    <div>
+    <div className='Results-Page'>
       <h1>Results</h1>
       {recycleCenters.length > 0 ? (
         <ul>
           {recycleCenters.map((center, index) => (
             <li key={index}>
-              <p>Name: {center.name}</p>
-              <p>Location: {center.location}</p>
+              <div className='Center'>
+                <p>Name: {center.name}</p>
+                <p>Location: {center.location}</p>
+              </div>
             </li>
           ))}
         </ul>
