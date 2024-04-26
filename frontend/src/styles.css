@@ -48,7 +48,8 @@
 
 header {
     background-color: #3F4437;
-    font-family: Georgia;
+    /*font-family: Georgia;*/
+    font-family: 'Courier New', Courier, monospace;;
     height: 15vh;
     margin: 0;
     padding: 0;
@@ -62,11 +63,12 @@ header {
 header h1 {
     text-align: center;
     color: white;
+    font-size: 40px;
 }
 
 header ul {
     text-align: center;
-    margin-top: 2%;
+    margin-top: 1.5%;
 }
 
 header ul li {
@@ -146,12 +148,20 @@ header ul li a {
     flex: 6; 
     background-color: #3F4437;
     color: white;
-    text-align: center;
     margin-top: 5%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.secondBox h1 {
+    margin-left: 3%;
+    text-align: center;
 }
 
 .secondBox p {
-    margin-top: 2%;
+    margin-top: 5%;
+    margin-left: 3%;
+    font-size: 20px;
+    text-align: left;
 }
 
 .secondImage {

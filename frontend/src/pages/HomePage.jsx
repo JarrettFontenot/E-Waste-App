@@ -12,8 +12,11 @@ function Home() {
       <div className="backgroundImage"></div>
       <div className="secondPart">
         <div className="secondBox">
-          <h1>Test text!</h1>
-          <p>Kitty wants out!</p>
+          <h1>How is e-waste a threat?</h1>
+          <p>Electronic devices contain toxic materials such as lead, mercury, cadmium, and brominated flame retardants.
+          When improperly disposed of, these substances can get into soil and water, which contaminates ecosystems and harming both human and animal health.</p>
+          <p> E-waste is a global issue, with vast amounts generated worldwide and often shipped to developing countries with lax regulations for processing and disposal. 
+          This can result in environmental and health burdens disproportionately affecting vulnerable communities in these regions.</p>
         </div>
         <div className="secondImage"></div>
       </div>
