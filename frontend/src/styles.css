@@ -210,13 +210,13 @@ header ul li a {
 .First-Text p {
     margin-top: 5%;
     margin-left: 3%;
-    font-size: 20px;
+    font-size: 24px;
     text-align: left;
 }
 
 .First-Image {
     flex: 3; 
-    background-image: url('trash.jpg');
+    background-image: url('first-waste.jpg');
     height: 60vh;
     background-size: cover;
     background-position: center;
@@ -247,13 +247,13 @@ header ul li a {
 .Second-Text p {
     margin-top: 5%;
     margin-left: 3%;
-    font-size: 20px;
+    font-size: 24px;
     text-align: left;
 }
 
 .Second-Image {
     flex: 3; 
-    background-image: url('trash.jpg');
+    background-image: url('second-waste.jpg');
     height: 60vh;
     background-size: cover;
     background-position: center;
@@ -284,13 +284,13 @@ header ul li a {
 .Third-Text p {
     margin-top: 5%;
     margin-left: 3%;
-    font-size: 20px;
+    font-size: 24px;
     text-align: left;
 }
 
 .Third-Image {
     flex: 3; 
-    background-image: url('trash.jpg');
+    background-image: url('third-image.jpg');
     height: 60vh;
     background-size: cover;
     background-position: center;
