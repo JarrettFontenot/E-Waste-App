@@ -1,46 +1,38 @@
-import React from 'react';
 import '../styles.css';
 import React, { useEffect, useState } from "react"
 import axios from "axios"
 import { useNavigate, Link } from "react-router-dom"
+
 function Register () {
 
     const [email, setEmail]= useState('')
     const [password, setPassword]= useState('')
     const [name, setName]= useState('')
 
-    async function submit (e){
+    const navigation = useNavigate();
+
+    async function submit(e) {
         e.preventDefault();
-
-        try{
-            await axios.post("http://localhost:3001/register",{
-                email, password, name
-            })
-            .then(res=> {
-                if (res.data="exist"){
-                    alert("user already exists")
-
-                }
-                else if (res.data="notexist"){
-                    history("/home")
-
-                }
-            })
-            .catch(e=>{
-                alert("wrong details")
-                consloe.log(e);
-            })
-
-        }
-        catch(e){
-            console.log(e);
-
-
+    
+        try {
+            const response = await axios.post("http://localhost:3001/register", { email, password, name });
+    
+            if (response.data === "User already exists") {
+                alert("User already exists");
+            } else if (response.data === "User created successfully") {
+                console.log("User created successfully");
+                navigation("/");
+                alert("Success");
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("Something went wrong");
         }
     }
+    
+    
 
-
-
+    /*
     useEffect(() => {
         const passwordInput = document.getElementById('password');
         const confirmPasswordInput = document.getElementById('confirm_password');
@@ -58,7 +50,9 @@ function Register () {
         return () => {
             confirmPasswordInput.removeEventListener('input', handlePasswordMatch);
         };
-    }, []); 
+    }, []);
+    */
+
     return (
     <div className="register-page">
         <div className="reg-container">

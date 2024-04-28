@@ -10,7 +10,7 @@ function Header() {
           <ul>
           <li><Link to="/about">About</Link></li> 
             <li><Link to="/register">Sign up</Link></li> 
-            <li><a href="#">Log in</a></li>
+            <li><Link to="/login">Log in</Link></li> 
             <li><a href="#">Profile</a></li>
           </ul>
         </nav>

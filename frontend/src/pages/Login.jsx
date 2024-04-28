@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles.css';
 import React, { useEffect, useState } from "react"
 import axios from "axios"
@@ -11,31 +10,19 @@ function Login() {
 
     async function submit (e){
         e.preventDefault();
-
-        try{
-            await axios.post("http://localhost:3001/login",{
-                email, password
-            })
-            .then(res=> {
-                if (res.data="exist"){
-                    history("/home")
-
-                }
-                else if (res.data="notexist"){
-                    alert("User is not logged in")
-
-                }
-            })
-            .catch(e=>{
-                alert("wrong details")
-                consloe.log(e);
-            })
-
-        }
-        catch(e){
-            console.log(e);
-
-
+        
+        try {
+            const response = await axios.post("http://localhost:3001/login", { email, password});
+    
+            if (response.data === "exist") {
+                alert("Success");
+                history("/");
+            } else if (response.data === "notexist") {
+                alert("User is not logged in")
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("Something went wrong");
         }
 
     }
