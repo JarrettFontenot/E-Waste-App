@@ -7,7 +7,7 @@ function Results() {
 
   return (
     <div className='Results-Page'>
-      <h1>Results</h1>
+      <h1>Recycle centers near you!</h1>
       {recycleCenters.length > 0 ? (
         <ul>
           {recycleCenters.map((center, index) => (
