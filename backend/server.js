@@ -37,6 +37,7 @@ mongoose.connect(connection, {
 
 const User = require("./models/Models");
 
+/*
 app.get("/login", cors(), (req, res)=>{})
 app.post("/login", async (req, res) => {
     const { email, password } = req.body;
@@ -69,6 +70,58 @@ app.post("/register", async (req, res) => {
         res.json("User created successfully");
     } catch (error) {
         console.error("Error registering user:", error);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+*/
+
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
+app.post("/register", async (req, res) => {
+    const { email, password, name } = req.body;
+    
+    try {
+        const existingUser = await User.findOne({ email });
+        
+        if (existingUser) {
+            return res.status(400).json("User already exists");
+        }
+
+        const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+        const newUser = new User({ email, password: hashedPassword, name });
+        await newUser.save();
+        res.json("User created successfully");
+    } catch (error) {
+        console.error("Error registering user:", error);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+app.post("/login", async (req, res) => {
+    const { email, password } = req.body;
+
+    try {
+        const user = await User.findOne({ email });
+
+        if (!user) {
+            return res.status(401).json("User not found");
+        }
+
+        const passwordMatch = await bcrypt.compare(password, user.password);
+
+        if (passwordMatch) {
+            res.json({
+                _id: user._id,
+                email: user.email,
+                name: user.name
+            });
+        } else {
+            res.status(401).json("Incorrect password");
+        }
+    } catch (error) {
+        console.error("Error logging in:", error);
         res.status(500).json({ error: "Server error" });
     }
 });

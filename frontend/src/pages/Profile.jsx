@@ -17,7 +17,7 @@ function Profile() {
         <div>
             <Header />
             <div className='Profile-Page'>
-                <h1>Your Profile</h1>
+                <h1>Welcome to your profile!</h1>
                 <div className='Profile-Container'>
                     <h1>Your e-waste contributions</h1>
                     <div className='Contribution-Counter'>
