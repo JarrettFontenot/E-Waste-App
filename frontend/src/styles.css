@@ -181,6 +181,7 @@ header ul li a {
     text-align: center;
     background-size: cover;
     background-position: center;
+    height: 100vh;
 }
 
 .Center {
@@ -381,4 +382,13 @@ body {
 
 .form-container h2 {
     color: white; 
+}
+
+.Profile-Page {
+    background-color: #3F4437;
+    color: white;
+    font-family: Georgia;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }

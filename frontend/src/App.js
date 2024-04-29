@@ -6,6 +6,7 @@ import Home from './pages/HomePage';
 import Register from './pages/Register';
 import Results from './pages/Results';
 import Login from './pages/Login';
+import Profile from './pages/Profile';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/results" element={<Results />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </Router>
