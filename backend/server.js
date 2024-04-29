@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const app = express();
 const axios = require("axios");
 const cors = require("cors");
+app.use(express.json());
 app.use(cors());
 require('dotenv').config();
 
@@ -32,6 +33,44 @@ mongoose.connect(connection, {
     console.log('Connected to MongoDB');
 }).catch((err) => {
     console.error('Error connecting to MongoDB:', err);
+});
+
+const User = require("./models/Models");
+
+app.get("/login", cors(), (req, res)=>{})
+app.post("/login", async (req, res) => {
+    const { email, password } = req.body;
+
+    try {
+        const check = await User.findOne({ email: email });
+        if (check) {
+            res.json("exist");
+        } else {
+            res.json("notexist");
+        }
+    } catch (e) {
+        console.error(e);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+app.post("/register", async (req, res) => {
+    const { email, password, name } = req.body;
+    
+    try {
+        const existingUser = await User.findOne({ email });
+        
+        if (existingUser) {
+            return res.json("User already exists");
+        }
+
+        const newUser = new User({ email, password, name });
+        await newUser.save();
+        res.json("User created successfully");
+    } catch (error) {
+        console.error("Error registering user:", error);
+        res.status(500).json({ error: "Server error" });
+    }
 });
 
 app.get('/results/:city', async (req, res) => {
