@@ -1,5 +1,6 @@
 # E-Waste Web Application
-Our goal for this project was to create an application that brings awareness to the growing problem of e-waste.
+* Made by Paige Ephlin and Jarrett Fontenot
+* Our goal for this project was to create an application that brings awareness to the growing problem of e-waste.
 # How to run
 * To run our project you most have NPM and Node.js, using npm, you must install all the dependecies stated below. Once downloading these, you must have two terminals and run "npm start" in the backend and frontend folders.
 * NOTE - The mongoDB Atlas database requires one of our personal email and passwords to connect to it, so when you run it the app will not perform to its full capabilities. Thus, we have created a demo video to showcase the full app.
