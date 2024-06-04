@@ -16,7 +16,7 @@ function Header() {
           )}
           <li><Link to="/register">Sign up</Link></li> 
           <li><Link to="/login">Log in</Link></li> 
-          <li><a href="#">Profile</a></li>
+          <li><Link to="/profile">Profile</Link></li> 
         </ul>
       </nav>
     </header>

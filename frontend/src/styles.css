@@ -50,7 +50,7 @@
 header {
     background-color: #3F4437;
     /*font-family: Georgia;*/
-    font-family: 'Courier New', Courier, monospace;;
+    font-family: 'Courier New', Courier, monospace;
     height: 15vh;
     margin: 0;
     padding: 0;
@@ -181,6 +181,7 @@ header ul li a {
     text-align: center;
     background-size: cover;
     background-position: center;
+    background-color: #3F4437;
 }
 
 .Center {
@@ -381,4 +382,58 @@ body {
 
 .form-container h2 {
     color: white; 
+}
+
+.Profile-Page {
+    background-color: #3F4437;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.Profile-Page h1 {
+    margin-top: 0;
+    margin-bottom: 2%;
+}
+      
+.Profile-Container {
+    width: 40%;
+    height: 75%;
+    background-color: rgba(240, 240, 240, 0.7); /* Semi-transparent background */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #3F4437;
+    align-items: center;
+}
+
+.Profile-Container h1 {
+    margin-top: 1%;
+}
+
+.Contribution-Counter {
+    display: flex;
+}
+  
+.Big-Number {
+    font-size: 100px;
+    margin-top: 15%;
+}
+  
+.Plus-Sign {
+    font-size: 100px; 
+    margin-left: 5%; 
+    margin-top: 15%;
+}
+
+.Minus-Sign {
+    font-size: 100px; 
+    margin-left: 5%; 
+    margin-top: 15%;
 }
