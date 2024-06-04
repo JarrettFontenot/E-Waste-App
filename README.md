@@ -1,5 +1,5 @@
 # E-Waste Web Application
-* Our goal for this project was to create an application that brings awareness to the growing problem of e-waste.
+* Our goal for this project was to create an application that brings awareness to the growing problem of e-waste. This app teaches you the dangers of e-waste, allows you to create a profile, and uses google maps API to geolocate recycle centers near you!
 # How to run
 * To run our project you most have NPM and Node.js, using npm, you must install all the dependecies stated below. Once downloading these, you must have two terminals and run "npm start" in the backend and frontend folders.
 # Features
