@@ -6,7 +6,7 @@ function Header() {
 
   return (
     <header>
-      <h1>E-Waste</h1>
+      <h1>EcoBytes</h1>
       <nav>
         <ul>
           {location.pathname === '/about' ? (
